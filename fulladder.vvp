@@ -1,0 +1,41 @@
+#! /mingw64/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "D:\msys2\mingw64\lib\ivl\system.vpi";
+:vpi_module "D:\msys2\mingw64\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\msys2\mingw64\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\msys2\mingw64\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\msys2\mingw64\lib\ivl\va_math.vpi";
+S_00000273e5db70a0 .scope module, "full_adder" "full_adder" 2 3;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c_in";
+    .port_info 3 /OUTPUT 1 "sum";
+    .port_info 4 /OUTPUT 1 "carry_out";
+o00000273e5df79d8 .functor BUFZ 1, C4<z>; HiZ drive
+o00000273e5df7a08 .functor BUFZ 1, C4<z>; HiZ drive
+L_00000273e5dba560 .functor XOR 1, o00000273e5df79d8, o00000273e5df7a08, C4<0>, C4<0>;
+o00000273e5df7a38 .functor BUFZ 1, C4<z>; HiZ drive
+L_00000273e5db7720 .functor XOR 1, L_00000273e5dba560, o00000273e5df7a38, C4<0>, C4<0>;
+L_00000273e5db7940 .functor AND 1, o00000273e5df79d8, o00000273e5df7a08, C4<1>, C4<1>;
+L_00000273e5dbc160 .functor AND 1, o00000273e5df79d8, o00000273e5df7a38, C4<1>, C4<1>;
+L_00000273e5e4c400 .functor OR 1, L_00000273e5db7940, L_00000273e5dbc160, C4<0>, C4<0>;
+L_00000273e5e4c470 .functor AND 1, o00000273e5df7a38, o00000273e5df7a08, C4<1>, C4<1>;
+L_00000273e5e4c4e0 .functor OR 1, L_00000273e5e4c400, L_00000273e5e4c470, C4<0>, C4<0>;
+v00000273e5dba4c0_0 .net *"_ivl_0", 0 0, L_00000273e5dba560;  1 drivers
+v00000273e5dbbf20_0 .net *"_ivl_10", 0 0, L_00000273e5e4c470;  1 drivers
+v00000273e5db7230_0 .net *"_ivl_4", 0 0, L_00000273e5db7940;  1 drivers
+v00000273e5db72d0_0 .net *"_ivl_6", 0 0, L_00000273e5dbc160;  1 drivers
+v00000273e5db7370_0 .net *"_ivl_8", 0 0, L_00000273e5e4c400;  1 drivers
+v00000273e5db7410_0 .net "a", 0 0, o00000273e5df79d8;  0 drivers
+v00000273e5db74b0_0 .net "b", 0 0, o00000273e5df7a08;  0 drivers
+v00000273e5e4b220_0 .net "c_in", 0 0, o00000273e5df7a38;  0 drivers
+v00000273e5e4b2c0_0 .net "carry_out", 0 0, L_00000273e5e4c4e0;  1 drivers
+v00000273e5e4bda0_0 .net "sum", 0 0, L_00000273e5db7720;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "fulladder.v";
