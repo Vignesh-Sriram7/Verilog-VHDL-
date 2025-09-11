@@ -28,9 +28,8 @@ vvp <output_file>.vvp
 
 # View waveforms (if a dump.vcd is generated)
 gtkwave dump.vcd
-Example:
 
-bash
+# Example:
 iverilog -o test.vvp ALU/test_alu.v
 vvp test.vvp
 gtkwave dump.vcd
