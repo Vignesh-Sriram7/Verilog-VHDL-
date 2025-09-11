@@ -1,9 +1,8 @@
-# Verilog Learning Collection 🚀
+# Verilog Learning Collection 
 
 ![Verilog](https://img.shields.io/badge/Language-Verilog-blue)
 ![Simulation](https://img.shields.io/badge/Simulation-Icarus%20Verilog-orange)
 
-This repository is a **collection of foundational Verilog modules and projects** designed to strengthen your understanding of **digital design**. Perfect for students, hobbyists, and anyone preparing for **VHDL programming**.
 
 ---
 
@@ -49,19 +48,3 @@ UART – Demonstrates UART communication logic
 
 Each folder contains Verilog source files and simple testbenches for simulation.
 
-## 🚀 Getting Started
-Clone the repository:
-
-bash
-Copy code
-git clone <repository-url>
-Navigate to the folder of the module you want to simulate.
-
-Compile, simulate, and visualize results as described in the Usage section.
-
-##💡 Tips for Beginners
-Always run simulations with GTKWave to see how signals change over time.
-
-Start with simple modules like Full_Adder or Counter before moving to system-level projects.
-
-Experiment by modifying input values in the testbench to see how your design responds.
